@@ -1,0 +1,155 @@
+/* 全体スタイル */
+body {
+    background-color: #fffaf0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px; 
+}
+
+header {
+    background-color: #deb887;
+    color: #fffaf0;
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #deb887;
+    color: #fffaf0;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* セクション共通 */
+.section-content-index {
+    padding: 10px 20px;
+}
+
+/* プロフィール部分 */
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.profile-content-sentence {
+    max-width: 600px;
+}
+
+.profile-content img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* パネル */
+.profile-panel, .research-panel, .favorite-panel, .contact-panel {
+    padding: 20px;
+    background-color: #fff1dc;
+    border: 1px solid #deb887;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    margin-bottom: 100px; 
+}
+
+
+/* ボックスコンテナ */
+.box-container-research, .box-container-favorite {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* ボックス */
+.box {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+    max-width: 400px;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: #fffaf0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+
+.box h2 {
+    margin-bottom: 10px;
+}
+
+/* 矢印ボタン */
+.arrows {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.arrow {
+    background-color: #fffaf0;
+    color: #deb887;
+    border: 2px solid #deb887;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.arrow:hover {
+    background-color: #deb887;
+    color: #fffaf0;
+}
+
+/* レスポンシブ対応（スマホ） */
+@media (max-width: 768px) {
+    .profile-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .box-container-research, .box-container-favorite {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 100%;
+        display: none;
+    }
+
+    .arrows {
+        display: block;
+    }
+}
+
+/* 最初のボックスだけ表示（スマホ時） */
+@media (max-width: 768px) {
+    .box-container-research .box:first-child,
+    .box-container-favorite .box:first-child {
+        display: block;
+    }
+}
+
+/* デスクトップ用：矢印を非表示 */
+@media (min-width: 769px) {
+    .arrows {
+        display: none;
+    }
+}

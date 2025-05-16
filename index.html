@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>個人ホームページ</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to mypage !</h1>
+  </header>
+
+  <div class="section-content-index">
+    <section id="profile" class="profile-panel">
+      <h2><i class="bi bi-person-hearts"></i> Profile</h2>
+      <div class="profile-content">
+        <div class="profile-content-image">
+          <a href="profile.html">
+            <img src="assets/images/profile_1.jpg" alt="わたし" style="width: 200px; height: auto; border-radius: 50%;" />
+          </a>
+        </div>
+        <div class="profile-content-sentence">
+          <h1>はじめまして！森 叶葉です。</h1>
+          <p>2020.4　立命館大学 情報理工学部 入学</p>
+          <p>2024.3　立命館大学 情報理工学部 卒業</p>
+          <p>2024.4　立命館大学大学院 情報理工学研究科 入学</p>
+          <p>now 　　立命館大学大学院 情報理工学研究科 在学</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="research-panel">
+      <h2><i class="bi bi-mortarboard"></i> Research</h2>
+      <p>異なる文化圏における絵文字の解釈の違いを明らかにし、異文化間でのコミュニケーションの齟齬を減らす方法を模索しています。</p>
+      <div class="box-container box-container-research">
+        <div class="box">
+          <h2>研究背景</h2>
+          <img src="assets/images/research1.png" />
+          <p>
+            近年、コンピュータを使用した異文化の交流が盛んになってきています。
+            絵文字は感情やイメージを付与することができるため、意思疎通の手助けをする効果があります。
+            しかし、文化圏によって絵文字の解釈が異なることがあるため、翻訳先言語では異なる解釈をされコミュニケーション齟齬が起きる可能性があります。
+            そこでこのようなコミュニケーションにおける問題を解決するために、絵文字の文化差を検出することを目的に研究しています。
+        </p>
+        </div>
+        <div class="box">
+          <h2>提案手法</h2>
+          <img src="assets/images/research2.png" />
+          <p>
+            「ある絵文字がついたテキストに込められた感情はその絵文字に関連がある」と考えのもとで、絵文字付きテキストを用いて、
+            絵文字に付与された感情を定量的に表現し、そこから絵文字解釈の文化差の検出を行います。
+            具体的には、BERTの事前学習モデルを使用し、Plutickの基本8感情へマルチラベル分類ができる感情予測モデルを構築します。
+            そのモデルにXから収集した日・英のポストを入力し、それぞれの絵文字が抱く絵文字感情ベクトルを文化圏ごとに作成します。
+            作成した文化圏ごとの絵文字感情ベクトルを比較し、文化差の検出を行っています。
+            </p>
+        </div>
+        <div class="box">
+          <h2>将来の展望</h2>
+          <p>
+            今後は、より精度の高い絵文字感情ベクトルの作成と文化差の検出を行い、人手での絵文字アノテーション結果との比較を行う予定です。
+            さらに検出した文化差を活用して、絵文字の誤解を防ぐインタフェースや、翻訳時に感情ニュアンスを補足する支援ツールの開発を進めたいと考えています。
+            絵文字をより安全かつ豊かなコミュニケーション手段として活用できる社会の実現に貢献することを目指します。
+          </p>
+        </div>
+      </div>
+      <div class="arrows arrows-research">
+        <button class="arrow prev prev-research">◀︎</button>
+        <button class="arrow next next-research">▶︎</button>
+      </div>
+    </div>
+
+    <div class="favorite-panel">
+      <h2><i class="bi bi-chat-square-heart"></i> Interest・Skill</h2>
+      <p>最近気になっていることや技術を紹介します。</p>
+      <div class="box-container box-container-favorite">
+        <div class="box">
+          <h2>Idol</h2>
+          <img src="assets/images/interest_skill1.jpeg" />
+          <p>アイドル鑑賞が趣味でライブに行ったり動画やラジオのコンテンツをよく追っています。
+            最近はJO1とSEVENTEENがお気に入りです。
+          </p>
+        </div>
+        <div class="box">
+          <h2>Food</h2>
+          <img src="assets/images/interest_skill2.jpg" />
+          <p>食べることが大好きで、美味しいご飯を求めていろんなお店によく出かけています。</p>
+        </div>
+        <div class="box">
+          <h2>Programming</h2>
+          <img src="assets/images/interest_skill3.png" />
+          <p>研究活動ではPythonをメインに使用しており、学部生の授業ではティーチングアシスタントとしてプログラミングの授業のサポートをしています。
+            また、現在はWebアプリケーション開発に挑戦中です。
+          </p>
+        </div>
+      </div>
+      <div class="arrows arrows-favorite">
+        <button class="arrow prev prev-favorite">◀︎</button>
+        <button class="arrow next next-favorite">▶︎</button>
+      </div>
+    </div>
+
+    <section id="contact" class="contact-panel">
+      <h2><i class="bi bi-envelope"></i> Contact</h2>
+      <p>メールでのお問い合わせは、<a href="mailto:is0583hr@ed.ritsumei.ac.jp">こちら</a>からどうぞ。</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Kanaha Mori</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
